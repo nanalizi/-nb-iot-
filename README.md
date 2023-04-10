@@ -1,23 +1,24 @@
-Æ÷²Ä:
-	STM32F103C8T6¿ª·¢°å
+# åŸºäºŽnb-iotçš„æ°´è´¨åœ¨çº¿ç›‘æµ‹ç³»ç»Ÿ
+#### å™¨æ:
+	STM32F103C8T6å¼€å‘æ¿
 	
-Ä¿µÄ:
-	ds18b20+PH´«¸ÐÆ÷+TDS´«¸ÐÆ÷+BC26ÉÏ´«°¢ÀïÔÆ
+#### ç›®çš„:
+	ds18b20+PHä¼ æ„Ÿå™¨+TDSä¼ æ„Ÿå™¨+BC26ä¸Šä¼ é˜¿é‡Œäº‘
 	
-Ó²¼þ×ÊÔ´:
-	1,BC26Ê¹ÓÃ´®¿Ú2Í¨ÐÅ£¬½ÓÏß·½Ê½£º
-	vcc-5v£»gnd-gnd£»TXD-PA3;RXD-PA3.
-	2,´®¿Ú1(²¨ÌØÂÊ:115200,PA9/PA10Á¬½ÓÔÚ°åÔØUSB×ª´®¿ÚÐ¾Æ¬CH340ÉÏÃæ)ÓÃÓÚ´òÓ¡Êý¾ÝÖÁ´®¿ÚÖúÊÖ¡£
-	3,»ë×Ç¶È´«¸ÐÆ÷Ê¹ÓÃADC1½ÓÏß,Ê¹ÓÃADC(STM32ÄÚ²¿ADC1,Í¨µÀ2,¼´:ADC1_CH2)
+#### ç¡¬ä»¶èµ„æº:
+1. BC26ä½¿ç”¨ä¸²å£2é€šä¿¡ï¼ŒæŽ¥çº¿æ–¹å¼ï¼š
+	vcc-5vï¼›gnd-gndï¼›TXD-PA3;RXD-PA3.
+2. ä¸²å£1(æ³¢ç‰¹çŽ‡:115200,PA9/PA10è¿žæŽ¥åœ¨æ¿è½½USBè½¬ä¸²å£èŠ¯ç‰‡CH340ä¸Šé¢)ç”¨äºŽæ‰“å°æ•°æ®è‡³ä¸²å£åŠ©æ‰‹ã€‚
+3. æµ‘æµŠåº¦ä¼ æ„Ÿå™¨ä½¿ç”¨ADC1æŽ¥çº¿,ä½¿ç”¨ADC(STM32å†…éƒ¨ADC1,é€šé“2,å³:ADC1_CH2)
 	VCC-5V;GND-GND;AO-PA2;DO-PA12.
-	4,PH´«¸ÐÆ÷Ê¹ÓÃADC1½ÓÏß£¬Ê¹ÓÃADC(STM32ÄÚ²¿ADC1,Í¨µÀ4,¼´:ADC1_CH4).
+4. PHä¼ æ„Ÿå™¨ä½¿ç”¨ADC1æŽ¥çº¿ï¼Œä½¿ç”¨ADC(STM32å†…éƒ¨ADC1,é€šé“4,å³:ADC1_CH4).
 	VCC-5V;GND-GND;PO-PA2;T1-A0.PA8,PA11
 	
-ÏÖÏó:
-	±¾ÏîÄ¿Í¨¹ý´®¿Ú2¶ÁÈ¡Ë®ÎÂ£¬PH£¬TDSµÈ£¬Í¨¹ý´®¿Ú4Á¬½ÓBC26½«´«¸ÐÆ÷Êý¾ÝÉÏ´«ÖÁ°¢ÀïÔÆ·þÎñÆ÷¡£²¢Í¨¹ý°¢ÀïÔÆ¹«ÓÃ°æÔÆÖÇÄÜAPPÏÂ·¢Êý¾ÝÒÔ¼°ÉÏ´«web¶ËË®ÖÊ¼à²â´óÆÁ£¬ÊµÏÖÎïÁªÍøµÄÊµÊ±ãÐÖµ¼à²âÓë¿ØÖÆ¡£
-	ÔÆ¶ËÍ¨ÐÅÐ­ÒéÎªMQTTÐ­Òé¡£
+#### çŽ°è±¡:
+	æœ¬é¡¹ç›®é€šè¿‡ä¸²å£2è¯»å–æ°´æ¸©ï¼ŒPHï¼ŒTDSç­‰ï¼Œé€šè¿‡ä¸²å£4è¿žæŽ¥BC26å°†ä¼ æ„Ÿå™¨æ•°æ®ä¸Šä¼ è‡³é˜¿é‡Œäº‘æœåŠ¡å™¨ã€‚å¹¶é€šè¿‡é˜¿é‡Œäº‘å…¬ç”¨ç‰ˆäº‘æ™ºèƒ½APPä¸‹å‘æ•°æ®ä»¥åŠä¸Šä¼ webç«¯æ°´è´¨ç›‘æµ‹å¤§å±ï¼Œå®žçŽ°ç‰©è”ç½‘çš„å®žæ—¶é˜ˆå€¼ç›‘æµ‹ä¸ŽæŽ§åˆ¶ã€‚
+	äº‘ç«¯é€šä¿¡åè®®ä¸ºMQTTåè®®ã€‚
 
-BC26 Ê¹ÓÃSTM32 ATÃüÁîÊµÏÖÁ¬½Ó°¢ÀïÔÆÊý¾ÝÉÏ´«²Î¿¼ÎÒµÄ²©¿Í£º
+#### BC26 ä½¿ç”¨STM32 ATå‘½ä»¤å®žçŽ°è¿žæŽ¥é˜¿é‡Œäº‘æ•°æ®ä¸Šä¼ å‚è€ƒæˆ‘çš„åšå®¢ï¼š
 https://blog.csdn.net/m0_51734150/article/details/130062658
 
 
